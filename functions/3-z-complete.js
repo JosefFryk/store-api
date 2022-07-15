@@ -3,7 +3,7 @@ const Airtable = require("airtable-node")
 
 
 const airtable = new Airtable ({apiKey: process.env.AIRTABLE_API_KEY})
-    .base('appIneM6L9YZ6IO3a')
+    .base('appzIAgibQs2j4SPh')
     .table('products')
 
 
