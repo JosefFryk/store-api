@@ -3,7 +3,7 @@ const Airtable = require('airtable');
 
 
 Airtable.configure({ apiKey: process.env.AIRTABLE_API_KEY });
-const base = Airtable.base(process.env.AIRTABLE_JAVASCRIPT_BASE_ID);
+const base = Airtable.base('appzIAgibQs2j4SPh');
 const table = base.table('products');
 
 exports.handler = async (event, context, callback) => {
