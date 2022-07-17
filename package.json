@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "netlify-cli": "^2.37.0"
-  }
+  },
+  "overrides": {
+    "node-fetch": "^2.6.7"
+}
 }
