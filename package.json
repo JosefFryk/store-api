@@ -17,6 +17,7 @@
     "airtable-node": "^0.1.20",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "glob-parent": "^6.0.2",
     "nodemailer": "^6.4.17",
     "stripe": "^8.131.1"
   },
@@ -25,5 +26,5 @@
   },
   "overrides": {
     "node-fetch": "^2.6.7"
-}
+  }
 }
