@@ -4,7 +4,7 @@ const result = document.querySelector('.result')
 
 const fetchProducts = async () => {
     try {
-        const {data} =await axios.get('/api/allproducts');
+        const {data} =await axios.get('/api/products');
         const products = data.map((product) => {
             const {id, image, name, price} = product
             return `<a href="product.html?id=${id}" class="product">

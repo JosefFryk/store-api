@@ -9,10 +9,15 @@ const airtable = new Airtable ({apiKey: process.env.AIRTABLE_API_KEY})
 
 
 exports.handler = async (event, context, cb) => {
-    const {id} = event.queryStringParameters
+    const {id} = event.queryStringParameters.id
     if (id) {
         try {
-            const product = await airtable.retrieve(id)
+            const response = await airtable.retrieve(id)
+            const data = response.map((product) => {
+              return { id: product.id,  ...product.fields };
+            });
+            const product = data.find((product) => product.id === id);
+      
             if (product.error){
                 return {
                     statusCode: 404,
